@@ -20,12 +20,13 @@ const PlayerCard = ({
     if(purchasedPlayers.length === 6){
       return toast("Already 6 Players Selected");
     }
+    
     setIsSelected(true);
     setAvailableBalance(availableBalance - price);
     setPurchasedPlayers([...purchasedPlayers, player]);
   };
   return (
-    <div className="card bg-base-100 shadow-sm p-4">
+    <div className="card bg-base-100 shadow-sm p-4 mx-3">
       <img
         className="rounded-lg w-full h-60 object-cover"
         src={player.img}
