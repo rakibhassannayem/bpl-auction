@@ -4,7 +4,15 @@ import { useState } from "react";
 
 const PlayerCard = ({ player, availableBalance, setAvailableBalance }) => {
   const [isSelected, setIsSelected] = useState(false);
-  
+  const price = player.price.split(",").join("");
+  const handleSelected = () => {
+    if (availableBalance < price) {
+      return alert("not enough money");
+    }
+    setIsSelected(true);
+    setAvailableBalance(availableBalance - price);
+  };
+
   return (
     <div className="card bg-base-100 shadow-sm p-4">
       <img
@@ -41,13 +49,12 @@ const PlayerCard = ({ player, availableBalance, setAvailableBalance }) => {
 
         <div className="flex items-center justify-between">
           <h3 className="font-semibold">
-            Price: $<span>{player.price}</span>
+            Price: $<span>{price}</span>
           </h3>
           <button
             disabled={isSelected}
             onClick={() => {
-              setIsSelected(true);
-              setAvailableBalance(availableBalance - player.price.split(',').join(""));
+              handleSelected();
             }}
             className="btn bg-yellow-300 font-semibold"
           >

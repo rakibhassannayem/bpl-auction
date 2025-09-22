@@ -10,7 +10,7 @@ const fetchedPlayers = async () => {
 const playersPromise = fetchedPlayers();
 
 function App() {
-  const [availableBalance, setAvailableBalance] = useState(6000000);
+  const [availableBalance, setAvailableBalance] = useState(600000);
   const [toggle, setToggle] = useState(true);
 
   return (
