@@ -1,6 +1,6 @@
 import navLogo from '../../assets/logo.png'
 import dollarCoin from "../../assets/dollarCoin.svg";
-const Navbar = () => {
+const Navbar = ({availableBalance}) => {
   return (
     <div className="navbar max-w-7xl mx-auto">
       <div className="flex-1">
@@ -8,10 +8,10 @@ const Navbar = () => {
           <img className="w-14" src={navLogo} alt="" />
         </a>
       </div>
-      <div className="flex gap-2 font-semibold">
-        <span>60000000</span>
-        <span>Coin</span>
+      <div className="flex gap-2 font-semibold border border-gray-300 p-3 rounded-xl">
         <img src={dollarCoin} alt="" />
+        <span>{availableBalance}</span>
+        <span>Coin</span>
       </div>
     </div>
   );

@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "img": "https://i.ibb.co.com/4ZGKXLjD/image.png",
     "name": "Shakib Al Hasan",
     "country": "Bangladesh",
@@ -10,6 +11,7 @@
     "rating": 9.3
   },
   {
+    "id": 2,
     "img": "https://i.ibb.co.com/QvWgHSxm/image.png",
     "name": "Mushfiqur Rahim",
     "country": "Bangladesh",
@@ -20,6 +22,7 @@
     "rating": 8.4
   },
   {
+    "id": 3,
     "img": "https://i.ibb.co.com/VWpBcH8D/image.png",
     "name": "Tamim Iqbal",
     "country": "Bangladesh",
@@ -30,6 +33,7 @@
     "rating": 8.7
   },
   {
+    "id": 4,
     "img": "https://i.ibb.co.com/HT9C3zyq/image.png",
     "name": "Mustafizur Rahman",
     "country": "Bangladesh",
@@ -40,6 +44,7 @@
     "rating": 9.1
   },
   {
+    "id": 5,
     "img": "https://i.ibb.co.com/HDCKH7Xb/image.png",
     "name": "Shahid Afridi",
     "country": "Pakistan",
@@ -50,6 +55,7 @@
     "rating": 8.6
   },
   {
+    "id": 6,
     "img": "https://i.ibb.co.com/Vpp1kjGJ/image.png",
     "name": "Babar Azam",
     "country": "Pakistan",
@@ -60,6 +66,7 @@
     "rating": 9.5
   },
   {
+    "id": 7,
     "img": "https://i.ibb.co.com/SXXXHV6G/image.png",
     "name": "Chris Gayle",
     "country": "West Indies",
@@ -70,6 +77,7 @@
     "rating": 9.7
   },
   {
+    "id": 8,
     "img": "https://i.ibb.co.com/sd9DwqVH/image.png",
     "name": "Andre Russell",
     "country": "West Indies",
@@ -80,6 +88,7 @@
     "rating": 9.4
   },
   {
+    "id": 9,
     "img": "https://i.ibb.co.com/V0jJqRjN/image.png",
     "name": "Lasith Malinga",
     "country": "Sri Lanka",
@@ -90,6 +99,7 @@
     "rating": 8.8
   },
   {
+    "id": 10,
     "img": "https://i.ibb.co.com/HL2SYYGC/image.png",
     "name": "Virat Kohli",
     "country": "India",
@@ -100,6 +110,7 @@
     "rating": 9.8
   },
   {
+    "id": 11,
     "img": "https://i.ibb.co.com/rRKLM3d0/image.png",
     "name": "David Warner",
     "country": "Australia",
@@ -110,6 +121,7 @@
     "rating": 9.0
   },
   {
+    "id": 12,
     "img": "https://i.ibb.co.com/w3nZxV0/image.png",
     "name": "AB de Villiers",
     "country": "South Africa",
