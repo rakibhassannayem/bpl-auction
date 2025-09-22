@@ -13,13 +13,19 @@ function App() {
   const [availableBalance, setAvailableBalance] = useState(600000);
   const [toggle, setToggle] = useState(true);
   const [purchasedPlayers, setPurchasedPlayers] = useState([]);
+  const removePlayer = (id) => {
+    const filteredPlayer = purchasedPlayers.filter((pId) => pId.id !== id);
+    setPurchasedPlayers(filteredPlayer);
+  };
 
   return (
     <>
       <Navbar availableBalance={availableBalance}></Navbar>
       <div className="max-w-7xl mx-auto flex justify-between items-center my-5">
         <h1 className="text-xl font-bold">
-          {toggle ? "Available Players" : `Selected Players (${purchasedPlayers.length}/6)`}
+          {toggle
+            ? "Available Players"
+            : `Selected Players (${purchasedPlayers.length}/6)`}
         </h1>
         <div>
           <button
@@ -59,6 +65,7 @@ function App() {
         <SelectedPlayers
           purchasedPlayers={purchasedPlayers}
           setPurchasedPlayers={setPurchasedPlayers}
+          removePlayer={removePlayer}
         ></SelectedPlayers>
       )}
     </>
