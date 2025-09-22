@@ -1,5 +1,4 @@
 import { use } from "react";
-
 import PlayerCard from "../PlayerCard/PlayerCard";
 
 const AvailablePlayers = ({

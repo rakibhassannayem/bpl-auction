@@ -1,9 +1,9 @@
 import deleteBin from "../../assets/trashBin.png";
 
 const SelectedCards = ({ player, removePlayer }) => {
-  const { img, name, role, id } = player;
-  const handleRemove= (id)=>{
-    removePlayer(id)
+  const { img, name, role } = player;
+  const handleRemove= ()=>{
+    removePlayer(player)
   }
   return (
     <div className="border border-gray-300 rounded-xl flex justify-between items-center p-3 mt-3">
@@ -14,7 +14,7 @@ const SelectedCards = ({ player, removePlayer }) => {
           <p className="text-gray-500 font-medium">{role}</p>
         </div>
       </div>
-      <img onClick={()=>handleRemove(id)} className="cursor-pointer" src={deleteBin} alt="" />
+      <img onClick={handleRemove} className="cursor-pointer" src={deleteBin} alt="" />
     </div>
   );
 };

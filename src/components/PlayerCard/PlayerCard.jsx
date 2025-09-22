@@ -1,6 +1,7 @@
 import userIcon from "../../assets/user.png";
 import flagIcon from "../../assets/flagIcon.png";
 import { useState } from "react";
+import { toast } from "react-toastify";
 
 const PlayerCard = ({
   player,
@@ -14,11 +15,11 @@ const PlayerCard = ({
 
   const handleSelected = () => {
     if (availableBalance < price) {
-      return alert("not enough money");
+      return toast("Not enough coins..");
     }
     setIsSelected(true);
     setAvailableBalance(availableBalance - price);
-    setPurchasedPlayers([...purchasedPlayers, player])
+    setPurchasedPlayers([...purchasedPlayers, player]);
   };
   return (
     <div className="card bg-base-100 shadow-sm p-4">
