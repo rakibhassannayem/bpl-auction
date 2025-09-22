@@ -15,7 +15,10 @@ const PlayerCard = ({
 
   const handleSelected = () => {
     if (availableBalance < price) {
-      return toast("Not enough coins..");
+      return toast("Not Enough Coins.");
+    }
+    if(purchasedPlayers.length === 6){
+      return toast("Already 6 Players Selected");
     }
     setIsSelected(true);
     setAvailableBalance(availableBalance - price);
