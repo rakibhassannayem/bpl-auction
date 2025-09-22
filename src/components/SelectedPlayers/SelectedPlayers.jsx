@@ -1,9 +1,10 @@
 import React from 'react';
 
-const SelectedPlayers = () => {
+const SelectedPlayers = ({purchasedPlayers}) => {
+  console.log(purchasedPlayers)
   return (
     <div className='max-w-7xl mx-auto'>
-      <h1 className='text-xl font-bold'>Selected</h1>
+      <h1 className='text-xl font-bold'>Selected: {purchasedPlayers.length}</h1>
     </div>
   );
 };

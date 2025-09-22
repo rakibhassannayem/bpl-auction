@@ -1,6 +1,6 @@
-import navLogo from '../../assets/logo.png'
+import navLogo from "../../assets/logo.png";
 import dollarCoin from "../../assets/dollarCoin.svg";
-const Navbar = ({availableBalance}) => {
+const Navbar = ({ availableBalance }) => {
   return (
     <div className="navbar max-w-7xl mx-auto">
       <div className="flex-1">

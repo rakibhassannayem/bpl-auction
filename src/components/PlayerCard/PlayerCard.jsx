@@ -2,17 +2,24 @@ import userIcon from "../../assets/user.png";
 import flagIcon from "../../assets/flagIcon.png";
 import { useState } from "react";
 
-const PlayerCard = ({ player, availableBalance, setAvailableBalance }) => {
+const PlayerCard = ({
+  player,
+  availableBalance,
+  setAvailableBalance,
+  purchasedPlayers,
+  setPurchasedPlayers,
+}) => {
   const [isSelected, setIsSelected] = useState(false);
   const price = player.price.split(",").join("");
+
   const handleSelected = () => {
     if (availableBalance < price) {
       return alert("not enough money");
     }
     setIsSelected(true);
     setAvailableBalance(availableBalance - price);
+    setPurchasedPlayers([...purchasedPlayers, player])
   };
-
   return (
     <div className="card bg-base-100 shadow-sm p-4">
       <img

@@ -12,7 +12,8 @@ const playersPromise = fetchedPlayers();
 function App() {
   const [availableBalance, setAvailableBalance] = useState(600000);
   const [toggle, setToggle] = useState(true);
-
+  const [purchasedPlayers, setPurchasedPlayers] = useState([]);
+  
   return (
     <>
       <Navbar availableBalance={availableBalance}></Navbar>
@@ -33,7 +34,7 @@ function App() {
               toggle ? "" : "font-bold bg-yellow-300"
             }`}
           >
-            Selected<span>(10)</span>
+            Selected<span>({purchasedPlayers.length})</span>
           </button>
         </div>
       </div>
@@ -45,13 +46,18 @@ function App() {
           }
         >
           <AvailablePlayers
+            playersPromise={playersPromise}
             availableBalance={availableBalance}
             setAvailableBalance={setAvailableBalance}
-            playersPromise={playersPromise}
+            purchasedPlayers={purchasedPlayers}
+            setPurchasedPlayers={setPurchasedPlayers}
           ></AvailablePlayers>
         </Suspense>
       ) : (
-        <SelectedPlayers></SelectedPlayers>
+        <SelectedPlayers
+          purchasedPlayers={purchasedPlayers}
+          setPurchasedPlayers={setPurchasedPlayers}
+        ></SelectedPlayers>
       )}
     </>
   );
