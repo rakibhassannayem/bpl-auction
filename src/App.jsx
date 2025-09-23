@@ -57,7 +57,9 @@ function App() {
       {toggle ? (
         <Suspense
           fallback={
-            <span className="loading loading-spinner loading-xl"></span>
+            <div className="max-w-7xl mx-auto text-center">
+              <span className="loading loading-spinner w-14"></span>
+            </div>
           }
         >
           <AvailablePlayers
