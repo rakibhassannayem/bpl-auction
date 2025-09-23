@@ -23,7 +23,10 @@ function App() {
   };
   return (
     <>
-      <Navbar setToggle={setToggle} availableBalance={availableBalance}></Navbar>
+      <Navbar
+        setToggle={setToggle}
+        availableBalance={availableBalance}
+      ></Navbar>
       <Banner></Banner>
       <div className="max-w-7xl mx-auto flex justify-between items-center my-5">
         <h1 className="text-xl font-bold mx-3">
